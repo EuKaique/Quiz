@@ -5,6 +5,45 @@
     outline: none;
     font-family: 'Inter', sans-serif;
 }
+
+.btn-purple{
+    background-color: #9C51E0;
+    color: #FFF;
+}
+.btn-purple:hover{
+    background-color: #8A39E1;
+    color: #FFF;
+}
+.btn-purple:focus{
+    box-shadow: 0 0 0 0.25rem rgb(193 110 253 / 25%);
+    border-color: #b567f1;
+}
+
+.btn-orange{
+    background-color: #FF9F45;
+    color: #FFF;
+}
+.btn-orange:hover{
+    background-color: #F76E11;
+    color: #FFF;
+}
+.btn-orange:focus{
+    box-shadow: 0 0 0 0.25rem rgba(247, 125, 12, 0.25);
+    border-color: #FFBC80;
+}
+
+.esporte{
+    height: 30rem;
+}
+
+menu{
+    height: 35rem;
+}
+
+.filme{
+    height: 20rem;
+}
+
 .menu-home{
     display:flex;
     align-items: center;
@@ -30,26 +69,62 @@
 
 .form-check{
     display: inline-block;
-    margin-right: 1rem;
 }
 
 .first-check{
-    margin-left: 35%;
+    margin-left: 31%;
     margin-top: 1.5rem;
     margin-bottom: 3rem;
 }
 
-.content-img{
+.esporte-img{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
 }
 
-.content-img img{
-    width: 400px;
+.esporte-img img{
+    width: 450px;
     border-radius: .5rem;
 }
+
+.pergunta{
+    margin-left: 15%;
+    font-weight: 600;
+}
+/* oculta as div's de esporte */
+.esporte,
+.esporte-img,
+.ocultar-esporte,
+.ocultar-esporte2,
+.ocultar-esporte3,
+.ocultar-esporte4{
+    display:none;
+}
+
+/* oculta as div's de filmes */
+.filme,
+.filme-img,
+.ocultar-filme,
+.ocultar-filme2,
+.ocultar-filme3,
+.ocultar-filme4{
+    display:none;
+}
+
+.filme-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.filme-img img{
+    width: 450px;
+    border-radius: .5rem;
+}
+
 
 .form-check2{
     display: flex;
@@ -71,10 +146,39 @@
 .footer{
     background-color: #2B2B2B;
     color: #FFF;
-    height: 200px;
+    height: 10rem;
 }
 
 .footer p{
     text-align: center;
     line-height: 4rem;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+}
+
+.socials ul{
+    list-style: none;
+}
+
+.socials li{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.socials li:first-child{
+    margin-left: -1rem;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.socials a:hover{
+    opacity: .4;
+    transition-delay: .1s;
 }
