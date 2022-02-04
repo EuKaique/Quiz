@@ -33,14 +33,15 @@
                 <button class="btn btn-purple buttonFilme" onclick="botaoFilmes()">Filmes</button>
             </div>
             <div class="form-check">
-                <button class="btn btn-primary buttonHistoria">Historia</button>
+                <button class="btn btn-primary buttonHistoria" onclick="botaoHistoria()">Historia</button>
             </div>
             <div class="form-check">
-                <button class="btn btn-orange buttonAnimais">Animais</button>
+                <button class="btn btn-orange buttonAnimais" onclick="botaoAnimais()">Animais</button>
             </div>
         </div>
         <section class="esporte" id="esporte">
         <!--ESPORTES-->
+        <p tempo1 class="tempo"></p>
         <div class="esporte-img">
             <img src="assets/img/esportes.jpg" class="img-fluid" alt="...">
         </div>
@@ -175,6 +176,7 @@
     </section>
     <!--FILMES-->
     <section class="filme">
+        <p tempo2 class="tempo"></p>
         <div class="filme-img">
             <img src="assets/img/filmes.jpg" class="img-fluid" alt="...">
         </div>
@@ -212,31 +214,31 @@
         </div>
         <div class="content ocultar-filme2">
             <p class="pergunta">
-                2- Quando foi a primeira olimpíada?
+                2- Quem é a atriz de "Víuva Negra"?
             </p>
-            <div class="options esporte2">
+            <div class="options filme2">
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option1">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
-                        6 de Abril de 1896
+                        Gal Gadot
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option2">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
-                        13 de Fevereiro de 1905
+                        Scarlett Johansson
                       </label3
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option3">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
-                        22 de Junho de 1968
+                        Angelina Jolie
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option4">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
-                        09 de Setembro de 1898
+                        Jennifer Lopez
                       </label>
                 </div>
                 <button type="submit" class="btn btn-secondary next2">Próxima pergunta</button>
@@ -244,69 +246,339 @@
         </div>
         <div class="content ocultar-filme3">
             <p class="pergunta">
-                3- Quem é o(a) atleta com mais medalhas olímpicas?
+                3- Quantos filmes tem "Shrek"?
             </p>
-            <div class="options esporte3">
+            <div class="options filme3">
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option1">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
-                        Usain Bolt
+                        5
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option2">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
-                        Michael Phelps
+                        3
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option3">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
-                        Daiane dos Santos
+                        4
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option4">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
-                        Rafael Nadal
+                        2
                       </label>
                 </div>
                 <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
             </div>
         </div>
-        <div class="content ocultar-esporte4">
+        <div class="content ocultar-filme4">
             <p class="pergunta">
-                4- Onde foi realizada a copa de 1990?
+                4- Em que ano foi inaugurada Hollywood?
             </p>
             <div class="options filme4">
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme4_option1">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
-                        México
+                        1903
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme4_option2">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
-                        Estados Unidos
+                        1905
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme4_option3">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
-                        Espanha
+                        1913
                       </label>
                 </div>
                 <div class="form-check2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme4_option4">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
-                        Itália
+                        1966
                       </label>
                 </div>
                 <button type="submit" class="btn btn-success next4">Finalizar</button>
             </div>
         </div>
     </section>
+    <!--HISTORIA-->
+    <section class="historia">
+        <p tempo3 class="tempo"></p>
+        <div class="historia-img">
+            <img src="assets/img/historia.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="ocultar-historia">
+            <p class="pergunta">
+                1- Em que ano foi proclamada a idependência do Brasil?
+            </p>
+            <div class="options historia1">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        5 de Abril de 1822
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        10 de Junho de 1500
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        7 de Setembro de 1822
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        26 de Maio de 1810
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-secondary next">Próxima pergunta</button>
+            </div>
+        </div>
+        <div class="content ocultar-historia2">
+            <p class="pergunta">
+                2- Quem foi o primeiro homem a pisar na lua?
+            </p>
+            <div class="options filme2">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        Charles Conrad
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        Alan Bean
+                      </label3
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        Alan B. Shepard Jr
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        Neil Armstrong
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-secondary next2">Próxima pergunta</button>
+            </div>
+        </div>
+        <div class="content ocultar-historia3">
+            <p class="pergunta">
+                3- Quem foi o primeiro presidente do brasil?
+            </p>
+            <div class="options historia3">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        Marechal Deodoro da Fonseca
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        Luis Inácio Lula da Silva
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        Fernando Henrique Cardoso
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        Getúlio Vargas
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
+            </div>
+        </div>
+        <div class="content ocultar-historia4">
+            <p class="pergunta">
+                4- Em que ano terminou a segunda guerra mundial?
+            </p>
+            <div class="options historia4">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        8 de Junho de 1946
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        8 de Maio de 1945
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        12 de Abril de 1944
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        15 de Janeiro de 1948
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-success next4">Finalizar</button>
+            </div>
+        </div>
+    </section>
+    <!--ANIMAIS-->
+    <section class="animais">
+        <p tempo4 class="tempo"></p>
+        <div class="animais-img">
+            <img src="assets/img/animais.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="ocultar-animais">
+            <p class="pergunta">
+                1- Qual é o maior mamífero terrestre?
+            </p>
+            <div class="options animais1">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        Elefante
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        Gorila
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        Hipopótamo
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        Baleia
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-secondary next">Próxima pergunta</button>
+            </div>
+        </div>
+        <div class="content ocultar-animais2">
+            <p class="pergunta">
+                2- Qual desses animais <b style="color: #F00;">não</b> é um mamífero?
+            </p>
+            <div class="optioanimais2">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        Serpente
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        Leão
+                      </label3
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        Águia
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        Avestruz 
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-secondary next2">Próxima pergunta</button>
+            </div>
+        </div>
+        <div class="content ocultar-animais3">
+            <p class="pergunta">
+                3- Qual é o animal mais rápido do mundo?
+            </p>
+            <div class="options animais3">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        Leopardo
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        Guepardo
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        Tigre
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        Rinoceronte
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
+            </div>
+        </div>
+        <div class="content ocultar-animais4">
+            <p class="pergunta">
+                4- Quais desses animais estão em extinção?
+            </p>
+            <div class="options animais4">
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option1">
+                    <label class="form-check-label option1 espaco" for="flexRadioDefault1">
+                        Tigre-branco, Pinguín, Boto-cor-de-rosa
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option2">
+                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                        Panda-gigante, Tubarão, Tigre
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option3">
+                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                        Onça-pintada, Lobo-guará, Arara-azul
+                      </label>
+                </div>
+                <div class="form-check2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option4">
+                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                        Mico-leão-dourado, Gorila, Elefante
+                      </label>
+                </div>
+                <button type="submit" class="btn btn-success next4">Finalizar</button>
+            </div>
+        </div>
+    </section>      
     </menu>
     <footer class="footer">
         <p>Desenvolvido por <b>Kaique</b> &reg;</p>

@@ -77,6 +77,20 @@ menu{
     margin-bottom: 3rem;
 }
 
+.tempo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 46%;
+    text-align: center;
+    font-weight: 600;
+    background-color: #444;
+    color: #AF0;
+    width: 8%;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
 .esporte-img{
     display: flex;
     align-items: center;
@@ -121,6 +135,50 @@ menu{
 }
 
 .filme-img img{
+    width: 450px;
+    border-radius: .5rem;
+}
+
+/* oculta as div's de historia */
+.historia,
+.historia-img,
+.ocultar-historia,
+.ocultar-historia2,
+.ocultar-historia3,
+.ocultar-historia4{
+    display:none;
+}
+
+.historia-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.historia-img img{
+    width: 450px;
+    border-radius: .5rem;
+}
+
+/* oculta as div's de animais */
+.animais,
+.animais-img,
+.ocultar-animais,
+.ocultar-animais2,
+.ocultar-animais3,
+.ocultar-animais4{
+    display:none;
+}
+
+.animais-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.animais-img img{
     width: 450px;
     border-radius: .5rem;
 }
