@@ -76,6 +76,46 @@ menu{
     margin-top: 1.5rem;
     margin-bottom: 3rem;
 }
+/* Ocultar para manipular no javascript a mensagem quando o tempo termina */
+.recomecar-esporte,
+.recomecar-filme,
+.recomecar-historia,
+.recomecar-animais,
+.acabou-esporte,
+.acabou-filme,
+.acabou-historia,
+.acabou-animais{
+    display: none;
+}
+
+.acabou-esporte,
+.acabou-filme,
+.acabou-historia,
+.acabou-animais{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.recomecar-esporte,
+.recomecar-filme,
+.recomecar-historia,
+.recomecar-animais{
+    margin-left: 47%;
+    padding: .5rem;
+    border: 1px solid transparent;
+    background-color: #444;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.recomecar-esporte:hover,
+.recomecar-filme:hover,
+.recomecar-historia:hover,
+.recomecar-animais:hover{
+    color: #AF0;
+}
+
 
 .tempo{
     display: flex;

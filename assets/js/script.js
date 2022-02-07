@@ -1,4 +1,14 @@
+//Parágrafo com mensagem e Botão de recarregar a página
+var acabouEsporte = document.querySelector('.acabou-esporte');
+var recomecarEsporte = document.querySelector('.recomecar-esporte');
+var acabouFilme = document.querySelector('.acabou-filme');
+var recomecarFilme = document.querySelector('.recomecar-filme');
+var acabouHistoria = document.querySelector('.acabou-historia');
+var recomecarHistoria = document.querySelector('.recomecar-historia');
+var acabouAnimais = document.querySelector('.acabou-animais');
+var recomecarAnimais = document.querySelector('.recomecar-animais');
 
+//Seções da página
 var esporteImg = document.querySelector(".esporte-img");
 var esporteQuestion1 = document.querySelector(".ocultar-esporte");
 var esportes = document.querySelector(".buttonEsportes");
@@ -21,6 +31,84 @@ var animais = document.querySelector(".buttonAnimais");
 
 var tempo = document.getElementById('tempo');
 
+/*CONTADOR DO TEMPO*/
+
+//Para esporte
+function iniciarTempo1(duracao1, tela1) {
+    var tempo1 = duracao1, minutos, segundos;
+    setInterval(function () {
+        minutos = parseInt(tempo1 / 60, 10);
+        segundos = parseInt(tempo1 % 60, 10);
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        tela1.textContent = minutos + ":" + segundos;
+
+        if (--tempo1 < 0) {
+            tempo1 = 0;
+            document.querySelector('.ocultar-esporte').style.display = 'none';
+
+            acabouEsporte.style.display = 'block';
+            recomecarEsporte.style.display = 'flex';
+            
+        }
+    }, 1000);
+}
+
+//Para filme
+function iniciarTempo2(duracao2, tela2) {
+    var tempo2 = duracao2, minutos, segundos;
+    setInterval(function () {
+        minutos = parseInt(tempo2 / 60, 10);
+        segundos = parseInt(tempo2 % 60, 10);
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        tela2.textContent = minutos + ":" + segundos;
+        if (--tempo2 < 0) {
+            tempo2 = 0;
+            document.querySelector('.ocultar-filme').style.display = 'none';
+
+            acabouFilme.style.display = 'block';
+            recomecarFilme.style.display = 'flex';
+        }
+    }, 1000);
+}
+//Para historia
+function iniciarTempo3(duracao3, tela3) {
+    var tempo3 = duracao3, minutos, segundos;
+    setInterval(function () {
+        minutos = parseInt(tempo3 / 60, 10);
+        segundos = parseInt(tempo3 % 60, 10);
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        tela3.textContent = minutos + ":" + segundos;
+        if (--tempo3 < 0) {
+            tempo3 = 0;
+            document.querySelector('.ocultar-historia').style.display = 'none';
+
+            acabouHistoria.style.display = 'block';
+            recomecarHistoria.style.display = 'flex';
+        }
+    }, 1000);
+}
+//Para animais
+function iniciarTempo4(duracao4, tela4) {
+    var tempo4 = duracao4, minutos, segundos;
+    setInterval(function () {
+        minutos = parseInt(tempo4 / 60, 10);
+        segundos = parseInt(tempo4 % 60, 10);
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        tela4.textContent = minutos + ":" + segundos;
+        if (--tempo4 < 0) {
+            tempo4 = 0;
+            document.querySelector('.ocultar-animais').style.display = 'none';
+
+            acabouAnimais.style.display = 'block';
+            recomecarAnimais.style.display = 'flex';
+        }
+    }, 1000);
+}
+
 /*ESPORTES*/
 function botaoEsporte(){
     sectionEsporte.style.display = 'block';
@@ -31,8 +119,21 @@ function botaoEsporte(){
 
     document.querySelector('.buttonFilme').style.display = "none";
     document.querySelector('.buttonHistoria').style.display = "none"; 
-    document.querySelector('.buttonAnimais').style.display = "none";     
+    document.querySelector('.buttonAnimais').style.display = "none";
+    
+    //Seta o temporizador
+    
+    // Converter para segundos
+    var duracao1 = 60 * 1;
+
+    // selecionando o tempo
+    tela1 = document.querySelector('[tempo1]');
+
+    // iniciando o tempo
+    iniciarTempo1(duracao1, tela1);
+    
 }
+
 
 /*FILMES*/
 function botaoFilmes(){
@@ -47,7 +148,18 @@ function botaoFilmes(){
 
     document.querySelector('.buttonEsportes').style.display = "none";
     document.querySelector('.buttonHistoria').style.display = "none"; 
-    document.querySelector('.buttonAnimais').style.display = "none";     
+    document.querySelector('.buttonAnimais').style.display = "none";
+    
+    //Seta o temporizador
+    
+    // Converter para segundos
+    var duracao2 = 60 * 1;
+
+    // selecionando o tempo
+    tela2 = document.querySelector('[tempo2]');
+
+    // iniciando o tempo
+    iniciarTempo2(duracao2, tela2);
 }
 
 /*HISTORIA*/
@@ -63,7 +175,18 @@ function botaoHistoria(){
 
     document.querySelector('.buttonEsportes').style.display = "none";
     document.querySelector('.buttonFilme').style.display = "none"; 
-    document.querySelector('.buttonAnimais').style.display = "none";     
+    document.querySelector('.buttonAnimais').style.display = "none";
+    
+    //Seta o temporizador
+    
+    // Converter para segundos
+    var duracao3 = 60 * 1;
+
+    // selecionando o tempo
+    tela3 = document.querySelector('[tempo3]');
+
+    // iniciando o tempo
+    iniciarTempo3(duracao3, tela3);
 }
 
 /*ANIMAIS*/
@@ -79,96 +202,25 @@ function botaoAnimais(){
 
     document.querySelector('.buttonEsportes').style.display = "none";
     document.querySelector('.buttonFilme').style.display = "none"; 
-    document.querySelector('.buttonHistoria').style.display = "none";     
-}
+    document.querySelector('.buttonHistoria').style.display = "none";
     
-/*CONTADOR DO TEMPO*/
-
-//Para esporte
-function iniciarTempo1(duracao1, tela1) {
-    var tempo1 = duracao1, minutos, segundos;
-    setInterval(function () {
-        minutos = parseInt(tempo1 / 60, 10);
-        segundos = parseInt(tempo1 % 60, 10);
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-        tela1.textContent = minutos + ":" + segundos;
-        if (--tempo1 < 0) {
-            tempo1 = duracao1;
-        }
-    }, 1000);
-}
-//Para filme
-function iniciarTempo2(duracao2, tela2) {
-    var tempo2 = duracao2, minutos, segundos;
-    setInterval(function () {
-        minutos = parseInt(tempo2 / 60, 10);
-        segundos = parseInt(tempo2 % 60, 10);
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-        tela2.textContent = minutos + ":" + segundos;
-        if (--tempo2 < 0) {
-            tempo2 = duracao2;
-        }
-    }, 1000);
-}
-//Para historia
-function iniciarTempo3(duracao3, tela3) {
-    var tempo3 = duracao3, minutos, segundos;
-    setInterval(function () {
-        minutos = parseInt(tempo3 / 60, 10);
-        segundos = parseInt(tempo3 % 60, 10);
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-        tela3.textContent = minutos + ":" + segundos;
-        if (--tempo3 < 0) {
-            tempo3 = duracao3;
-        }
-    }, 1000);
-}
-//Para animais
-function iniciarTempo4(duracao4, tela4) {
-    var tempo4 = duracao4, minutos, segundos;
-    setInterval(function () {
-        minutos = parseInt(tempo4 / 60, 10);
-        segundos = parseInt(tempo4 % 60, 10);
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-        tela4.textContent = minutos + ":" + segundos;
-        if (--tempo4 < 0) {
-            tempo4 = duracao4;
-        }
-    }, 1000);
-}
-
-//Seta o temporizador
-window.onload = function () {
+    //Seta o temporizador
+    
     // Converter para segundos
-    var duracao1 = 60 * 7;
-    var duracao2 = 60 * 7;
-    var duracao3 = 60 * 7;
-    var duracao4 = 60 * 7; 
+    var duracao4 = 60 * 1;
 
     // selecionando o tempo
-    tela1 = document.querySelector('[tempo1]');
-    tela2 = document.querySelector('[tempo2]');
-    tela3 = document.querySelector('[tempo3]');
-    tela4 = document.querySelector('[tempo4]'); 
+    tela4 = document.querySelector('[tempo4]');
 
     // iniciando o tempo
-    if(esportes.onclick){
-        iniciarTempo1(duracao1, tela1);
-    }       
-    if(filmes.onclick){
-        iniciarTempo2(duracao2, tela2);
-    }
-    if(historia.onclick){
-        iniciarTempo3(duracao3, tela3);
-    }
-    if(animais.onclick){
-        iniciarTempo4(duracao4, tela4);
-    }
-     
-};
+    iniciarTempo4(duracao4, tela4);
+}
+
+//Recarregar página
+function recarrega(){
+    document.location.reload(true);
+}
+
+
 
 
