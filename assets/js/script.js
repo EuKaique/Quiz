@@ -11,6 +11,9 @@ var recomecarAnimais = document.querySelector('.recomecar-animais');
 //Seções da página
 var esporteImg = document.querySelector(".esporte-img");
 var esporteQuestion1 = document.querySelector(".ocultar-esporte");
+var esporteQuestion2 = document.querySelector(".ocultar-esporte2");
+var esporteQuestion3 = document.querySelector(".ocultar-esporte3");
+var esporteQuestion4 = document.querySelector(".ocultar-esporte4");
 var esportes = document.querySelector(".buttonEsportes");
 var sectionEsporte = document.querySelector(".esporte");
 
@@ -45,7 +48,11 @@ function iniciarTempo1(duracao1, tela1) {
 
         if (--tempo1 < 0) {
             tempo1 = 0;
-            document.querySelector('.ocultar-esporte').style.display = 'none';
+
+            esporteQuestion1.style.display = 'none';
+            esporteQuestion2.style.display = 'none';
+            esporteQuestion3.style.display = 'none';
+            esporteQuestion4.style.display = 'none';
 
             acabouEsporte.style.display = 'block';
             recomecarEsporte.style.display = 'flex';
@@ -220,6 +227,101 @@ function botaoAnimais(){
 function recarrega(){
     document.location.reload(true);
 }
+
+//Tratando as respostas
+
+//primeira pergunta
+var esporteResposta1a = document.getElementById('esporte1_option1').checked;
+var esporteResposta1b = document.getElementById('esporte1_option2').checked;
+var esporteResposta1c = document.getElementById('esporte1_option3').checked;
+var esporteResposta1d = document.getElementById('esporte1_option4').checked;
+
+var nome = document.getElementsByName('flexRadioDefault');
+
+var filmeResposta1a = document.getElementById('filme1_option1');
+var filmeResposta1b = document.getElementById('filme1_option2');
+var filmeResposta1c = document.getElementById('filme1_option3');
+var filmeResposta1d = document.getElementById('filme1_option4');
+
+var historiaResposta1a = document.getElementById('historia1_option1');
+var historiaResposta1b = document.getElementById('historia1_option2');
+var historiaResposta1c = document.getElementById('historia1_option3');
+var historiaResposta1d = document.getElementById('historia1_option4');
+
+var animaisResposta1a = document.getElementById('esporte1_option1');
+var animaisResposta1b = document.getElementById('esporte1_option2');
+var animaisResposta1c = document.getElementById('esporte1_option3');
+var animaisResposta1d = document.getElementById('esporte1_option4');
+
+if(document.querySelector('input[name="flexRadioDefault"]:checked')){
+    document.querySelector('.next').addEventListener('click', () => {
+        esporteQuestion1.style.display = 'none';
+        esporteQuestion2.style.display = 'block';
+    });
+}
+
+//segunda pergunta
+var esporteResposta2a = document.getElementById('esporte2_option1');
+var esporteResposta2b = document.getElementById('esporte2_option2');
+var esporteResposta2c = document.getElementById('esporte2_option3');
+var esporteResposta2d = document.getElementById('esporte2_option4');
+
+var filmeResposta2a = document.getElementById('filme2_option1');
+var filmeResposta2b = document.getElementById('filme2_option2');
+var filmeResposta2c = document.getElementById('filme2_option3');
+var filmeResposta2d = document.getElementById('filme2_option4');
+
+var historiaResposta2a = document.getElementById('historia2_option1');
+var historiaResposta2b = document.getElementById('historia2_option2');
+var historiaResposta2c = document.getElementById('historia2_option3');
+var historiaResposta2d = document.getElementById('historia2_option4');
+
+var animaisResposta2a = document.getElementById('esporte2_option1');
+var animaisResposta2b = document.getElementById('esporte2_option2');
+var animaisResposta2c = document.getElementById('esporte2_option3');
+var animaisResposta2d = document.getElementById('esporte2_option4');
+
+//terceira pergunta
+var esporteResposta3a = document.getElementById('esporte3_option1');
+var esporteResposta3b = document.getElementById('esporte3_option2');
+var esporteResposta3c = document.getElementById('esporte3_option3');
+var esporteResposta3d = document.getElementById('esporte3_option4');
+
+var filmeResposta3a = document.getElementById('filme3_option1');
+var filmeResposta3b = document.getElementById('filme3_option2');
+var filmeResposta3c = document.getElementById('filme3_option3');
+var filmeResposta3d = document.getElementById('filme3_option4');
+
+var historiaResposta3a = document.getElementById('historia3_option1');
+var historiaResposta3b = document.getElementById('historia3_option2');
+var historiaResposta3c = document.getElementById('historia3_option3');
+var historiaResposta3d = document.getElementById('historia3_option4');
+
+var animaisResposta3a = document.getElementById('esporte3_option1');
+var animaisResposta3b = document.getElementById('esporte3_option2');
+var animaisResposta3c = document.getElementById('esporte3_option3');
+var animaisResposta3d = document.getElementById('esporte3_option4');
+
+//quarta pergunta
+var esporteResposta4a = document.getElementById('esporte4_option1');
+var esporteResposta4b = document.getElementById('esporte4_option2');
+var esporteResposta4c = document.getElementById('esporte4_option3');
+var esporteResposta4d = document.getElementById('esporte4_option4');
+
+var filmeResposta4a = document.getElementById('filme4_option1');
+var filmeResposta4b = document.getElementById('filme4_option2');
+var filmeResposta4c = document.getElementById('filme4_option3');
+var filmeResposta4d = document.getElementById('filme4_option4');
+
+var historiaResposta4a = document.getElementById('historia4_option1');
+var historiaResposta4b = document.getElementById('historia4_option2');
+var historiaResposta4c = document.getElementById('historia4_option3');
+var historiaResposta4d = document.getElementById('historia4_option4');
+
+var animaisResposta4a = document.getElementById('esporte4_option1');
+var animaisResposta4b = document.getElementById('esporte4_option2');
+var animaisResposta4c = document.getElementById('esporte4_option3');
+var animaisResposta4d = document.getElementById('esporte4_option4');
 
 
 

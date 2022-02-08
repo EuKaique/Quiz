@@ -76,6 +76,11 @@ menu{
     margin-top: 1.5rem;
     margin-bottom: 3rem;
 }
+
+.next2{
+    float: right;
+    margin-right: 5%;
+}
 /* Ocultar para manipular no javascript a mensagem quando o tempo termina */
 .recomecar-esporte,
 .recomecar-filme,
