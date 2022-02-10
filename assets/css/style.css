@@ -77,10 +77,25 @@ menu{
     margin-bottom: 3rem;
 }
 
-.next2{
+.next2,
+.nextEsporte,
+.nextFilme,
+.nextFilme2,
+.nextFilme3,
+.nextHistoria,
+.nextHistoria2,
+.nextHistoria3,
+.nextAnimais,
+.nextAnimais2,
+.nextAnimais3,
+.finalizarEsporte,
+.finalizarFilme,
+.finalizarHistoria,
+.finalizarAnimais{
     float: right;
     margin-right: 5%;
 }
+
 /* Ocultar para manipular no javascript a mensagem quando o tempo termina */
 .recomecar-esporte,
 .recomecar-filme,

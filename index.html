@@ -25,7 +25,7 @@
             <img src="assets/img/cerebro.png" alt="Quiz" class="img-home">
         </div>
         <div class="options-home">
-            <h3>Escolha o tema:</h3>
+            <h3 id="tema">Escolha o tema:</h3>
             <div class="form-check first-check">
                 <button class="btn btn-success buttonEsportes" onclick="botaoEsporte()">Esportes</button>
               </div>
@@ -53,26 +53,26 @@
             </p>
             <div class="options esporte1">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option1" onclick="checkar(this.id)">
                     <label class="form-check-label option1 espaco" for="esporte1_option1">
                         Brasil
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option2">
-                    <label class="form-check-label option2 espaco" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option2" onclick="checkar(this.id)">
+                    <label class="form-check-label option2 espaco" for="esporte1_option2">
                         China
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option3">
-                    <label class="form-check-label option3 espaco" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option3" onclick="checkar(this.id)">
+                    <label class="form-check-label option3 espaco" for="esporte1_option3">
                         Inglaterra
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option4">
-                    <label class="form-check-label option4 espaco" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte1_option4" onclick="checkar(this.id)">
+                    <label class="form-check-label option4 espaco" for="esporte1_option4">
                         França
                       </label>
                 </div>
@@ -85,25 +85,25 @@
             </p>
             <div class="options esporte2">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option1" onclick="checkar2(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         6 de Abril de 1896
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option2" onclick="checkar2(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         13 de Fevereiro de 1905
-                    </label3>
+                    </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option3" onclick="checkar2(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         22 de Junho de 1968
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte2_option4" onclick="checkar2(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         09 de Setembro de 1898
                       </label>
@@ -117,62 +117,62 @@
             </p>
             <div class="options esporte3">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option1" onclick="checkar3(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Usain Bolt
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option2" onclick="checkar3(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Michael Phelps
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option3" onclick="checkar3(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Daiane dos Santos
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte3_option4" onclick="checkar3(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Rafael Nadal
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextEsporte">Próxima pergunta</button>
             </div>
         </div>
-        <div class="content ocultar-esporte4">
+        <div class="ocultar-esporte4">
             <p class="pergunta">
                 4- Onde foi realizada a copa de 1990?
             </p>
             <div class="options esporte4">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option1" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         México
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option2" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Estados Unidos
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option3" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Espanha
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="esporte4_option4" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Itália
                       </label>
                 </div>
-                <button type="submit" class="btn btn-success next4">Finalizar</button>
+                <button type="submit" class="btn btn-success finalizarEsporte">Finalizar</button>
             </div>
         </div>
     </section>
@@ -190,62 +190,62 @@
             </p>
             <div class="options filme1">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option1" onclick="checkar(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Robert Downey Jr
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option2" onclick="checkar(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Chris Evans
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option3" onclick="checkar(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Ben Stiller
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme1_option4" onclick="checkar(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Brendan Fraser
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextFilme">Próxima pergunta</button>
             </div>
         </div>
-        <div class="content ocultar-filme2">
+        <div class="ocultar-filme2">
             <p class="pergunta">
                 2- Quem é a atriz de "Víuva Negra"?
             </p>
             <div class="options filme2">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option1" onclick="checkar2(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Gal Gadot
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option2" onclick="checkar2(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Scarlett Johansson
-                      </label3
+                    </label3>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option3" onclick="checkar2(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Angelina Jolie
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme2_option4" onclick="checkar2(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Jennifer Lopez
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next2">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextFilme2">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-filme3">
@@ -254,30 +254,30 @@
             </p>
             <div class="options filme3">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option1" onclick="checkar3(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         5
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option2" onclick="checkar3(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         3
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option3" onclick="checkar3(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         4
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filme3_option4" onclick="checkar3(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         2
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextFilme3">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-filme4">
@@ -309,7 +309,7 @@
                         1966
                       </label>
                 </div>
-                <button type="submit" class="btn btn-success next4">Finalizar</button>
+                <button type="submit" class="btn btn-success finalizarFilme">Finalizar</button>
             </div>
         </div>
     </section>
@@ -327,30 +327,30 @@
             </p>
             <div class="options historia1">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option1" onclick="checkar(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         5 de Abril de 1822
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option2" onclick="checkar(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         10 de Junho de 1500
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option3" onclick="checkar(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         7 de Setembro de 1822
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia1_option4" onclick="checkar(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         26 de Maio de 1810
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextHistoria">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-historia2">
@@ -359,30 +359,30 @@
             </p>
             <div class="options filme2">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option1" onclick="checkar2(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Charles Conrad
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option2" onclick="checkar2(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Alan Bean
-                      </label3
+                    </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option3" onclick="checkar2(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Alan B. Shepard Jr
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia2_option4" onclick="checkar2(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Neil Armstrong
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next2">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextHistoria2">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-historia3">
@@ -391,35 +391,35 @@
             </p>
             <div class="options historia3">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option1" onclick="checkar3(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Marechal Deodoro da Fonseca
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option2" onclick="checkar3(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Luis Inácio Lula da Silva
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option3" onclick="checkar3(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Fernando Henrique Cardoso
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia3_option4" onclick="checkar3(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Getúlio Vargas
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextHistoria3">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-historia4">
             <p class="pergunta">
-                4- Em que ano terminou a segunda guerra mundial?
+                4- Quando terminou a segunda guerra mundial?
             </p>
             <div class="options historia4">
                 <div class="form-check2">
@@ -446,7 +446,7 @@
                         15 de Janeiro de 1948
                       </label>
                 </div>
-                <button type="submit" class="btn btn-success next4">Finalizar</button>
+                <button type="submit" class="btn btn-success finalizarHistoria">Finalizar</button>
             </div>
         </div>
     </section>
@@ -464,30 +464,30 @@
             </p>
             <div class="options animais1">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option1" onclick="checkar(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Elefante
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option2" onclick="checkar(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Gorila
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option3" onclick="checkar(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Hipopótamo
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais1_option4" onclick="checkar(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Baleia
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextAnimais">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-animais2">
@@ -496,30 +496,30 @@
             </p>
             <div class="optioanimais2">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option1" onclick="checkar2(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Serpente
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option2" onclick="checkar2(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Leão
-                      </label3
+                    </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option3" onclick="checkar2(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Águia
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais2_option4" onclick="checkar2(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Avestruz 
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next2">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextAnimais2">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-animais3">
@@ -528,30 +528,30 @@
             </p>
             <div class="options animais3">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option1" onclick="checkar3(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Leopardo
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option2" onclick="checkar3(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Guepardo
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option3" onclick="checkar3(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Tigre
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais3_option4" onclick="checkar3(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Rinoceronte
                       </label>
                 </div>
-                <button type="submit" class="btn btn-secondary next3">Próxima pergunta</button>
+                <button type="submit" class="btn btn-secondary nextAnimais3">Próxima pergunta</button>
             </div>
         </div>
         <div class="content ocultar-animais4">
@@ -583,9 +583,16 @@
                         Mico-leão-dourado, Gorila, Elefante
                       </label>
                 </div>
-                <button type="submit" class="btn btn-success next4">Finalizar</button>
+                <button type="submit" class="btn btn-success finalizarAnimais">Finalizar</button>
             </div>
         </div>
+    </section>
+    <section class="resultado" id="resultado">
+        <div class="img-resultado">
+            <img src="" alt="">
+        </div>
+        <p id="acertos"></p>
+        <p id="erros"></p>
     </section>      
     </menu>
     <footer class="footer">
