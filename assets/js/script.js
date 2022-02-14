@@ -45,34 +45,7 @@ var tema = document.getElementById("tema");
 
 var tempo = document.getElementById('tempo');
 
-var resultado = document.getElementById("resultado");
-
-/*CONTADOR DO TEMPO*/
-
-//Para esporte
-function iniciarTempo1(duracao1, tela1) {
-    var tempo1 = duracao1, minutos, segundos;
-    setInterval(function () {
-        minutos = parseInt(tempo1 / 60, 10);
-        segundos = parseInt(tempo1 % 60, 10);
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-        tela1.textContent = minutos + ":" + segundos;
-
-        if (--tempo1 < 0) {
-            tempo1 = 0;
-
-            esporteQuestion1.style.display = 'none';
-            esporteQuestion2.style.display = 'none';
-            esporteQuestion3.style.display = 'none';
-            esporteQuestion4.style.display = 'none';
-
-            acabouEsporte.style.display = 'block';
-            recomecarEsporte.style.display = 'flex';
-            
-        }
-    }, 1000);
-}
+var resultado = document.querySelector(".resultado");
 
 //Para filme
 function iniciarTempo2(duracao2, tela2) {
@@ -251,8 +224,8 @@ function recarrega(){
 }
 
 //Tratando as respostas
-var contador = 0;
-var resposta = [];
+var erros = 1;
+var resposta = new Array(4);
 
 //primeira pergunta
 function checkar(clicked_id){
@@ -261,29 +234,32 @@ function checkar(clicked_id){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[0] = 'Brasil';
         });
     }
     else if(clicked_id == 'esporte1_option2'){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[0] = 'China';
         });
     }
     else if(clicked_id == 'esporte1_option3'){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
-            contador++;
-            resposta[0] = 'acertou';
+   
+            resposta[0] = 'Inglaterra';
         });
     }
     else if(clicked_id == 'esporte1_option4'){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[0] = 'França';
         });
     }
     //filmes
@@ -371,29 +347,32 @@ function checkar2(clicked_id){
         document.querySelector('.next2').addEventListener('click', () => {
             esporteQuestion2.style.display = 'none';
             esporteQuestion3.style.display = 'block';
-            contador++;
-            resposta[1] = 'acertou';
+ 
+            resposta[1] = '6 de Abril de 1896';
         });
     }
     else if(clicked_id == 'esporte2_option2'){
         document.querySelector('.next2').addEventListener('click', () => {
             esporteQuestion2.style.display = 'none';
             esporteQuestion3.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[1] = '13 de Fevereiro de 1905';
         });
     }
     else if(clicked_id == 'esporte2_option3'){
         document.querySelector('.next2').addEventListener('click', () => {
             esporteQuestion2.style.display = 'none';
             esporteQuestion3.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[1] = '22 de Junho de 1968';
         })
     }
     else if(clicked_id == 'esporte2_option4'){
         document.querySelector('.next2').addEventListener('click', () => {
             esporteQuestion2.style.display = 'none';
             esporteQuestion3.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[1] = '09 de Setembro de 1898';
         });
     }
     //filmes
@@ -481,29 +460,32 @@ function checkar3(clicked_id){
         document.querySelector('.nextEsporte').addEventListener('click', () => {
             esporteQuestion3.style.display = 'none';
             esporteQuestion4.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[2] = 'Usain Bolt';
         });
     }
     else if(clicked_id == 'esporte3_option2'){
         document.querySelector('.nextEsporte').addEventListener('click', () => {
             esporteQuestion3.style.display = 'none';
             esporteQuestion4.style.display = 'block';
-            contador++;
-            resposta[2] = 'acertou';
+ 
+            resposta[2] = 'Michael Phelps';
         });
     }
     else if(clicked_id == 'esporte3_option3'){
         document.querySelector('.nextEsporte').addEventListener('click', () => {
             esporteQuestion3.style.display = 'none';
             esporteQuestion4.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[2] = 'Daiane dos Santos';
         })
     }
     else if(clicked_id == 'esporte3_option4'){
         document.querySelector('.nextEsporte').addEventListener('click', () => {
             esporteQuestion3.style.display = 'none';
             esporteQuestion4.style.display = 'block';
-            contador++;
+            erros++;
+            resposta[2] = 'Rafael Nadal';
         });
     }
     //filmes
@@ -589,37 +571,221 @@ function checkarUltima(clicked_id){
     //esporte
     if(clicked_id == 'esporte4_option1'){
         document.querySelector('.finalizarEsporte').addEventListener('click', () => {
+            esporteImg.style.display = 'none';
             esporteQuestion4.style.display = 'none';
             esportes.style.display = 'none';
-            contador++;
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo1]').style.display = 'none';
+            acabouEsporte.style.display = 'none';
+            recomecarEsporte.style.display = 'none';
+
+            erros++;
+            resposta[3] = 'México';
+
+            resultado.style.display = 'block';
+
+            if(erros >= 4){
+                $('#erros').text('Você errou todas as respostas');
+            }
+            if(erros < 4 && erros == 3){
+                $('#erros').text('Você errou 3 respostas');
+            }
+            if(erros < 3 && erros == 2){
+                $('#erros').text('Você errou 2 respostas');
+            }
+            else{
+                if(resposta[0] == '' && alternativa == '1.Brasil'){
+                    $('#acertos').text('Resposta certa: 3.Inglaterra');
+                    $('#erros').text('Você errou a pergunta: ' + alternativa);
+                }
+                
+            }
+
         });
     }
     else if(clicked_id == 'esporte4_option2'){
-        document.querySelector('.finalizarEsporte').addEventListener('click', () => {
-            esporteQuestion4.style.display = 'none';
-            esportes.style.display = 'none';
-            contador++;
-        });
-    }
-    else if(clicked_id == 'esporte4_option3'){
-        document.querySelector('.finalizarEsporte').addEventListener('click', () => {
-            esporteQuestion4.style.display = 'none';
-            esportes.style.display = 'none';
-            contador++;
-        })
-    }
-    else if(clicked_id == 'esporte4_option4'){
         document.querySelector('.finalizarEsporte').addEventListener('click', () => {
             esporteImg.style.display = 'none';
             esporteQuestion4.style.display = 'none';
             esportes.style.display = 'none';
             tema.style.display = 'none';
-            //tempo.style.display = 'none';
+
             document.querySelector('[tempo1]').style.display = 'none';
-            contador++;
-            resposta[3] = 'acertou';
+            acabouEsporte.style.display = 'none';
+            recomecarEsporte.style.display = 'none';
+
+            erros++;
+            resposta[3] = 'Estados Unidos';
+
+            resultado.style.display = 'block';
+
+            if(erros >= 4){
+                $('#erros').text('Você errou todas as respostas');
+            }
+            if(erros < 4 && erros == 3){
+                $('#erros').text('Você errou 3 respostas');
+            }
+            if(erros < 3 && erros == 2){
+                $('#erros').text('Você errou 2 respostas');
+            }
+            else{
+                $('#erros').text('Você errou uma pergunta');
+            }
+
         });
     }
+    else if(clicked_id == 'esporte4_option3'){
+        document.querySelector('.finalizarEsporte').addEventListener('click', () => {
+            esporteImg.style.display = 'none';
+            esporteQuestion4.style.display = 'none';
+            esportes.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo1]').style.display = 'none';
+            acabouEsporte.style.display = 'none';
+            recomecarEsporte.style.display = 'none';
+
+            erros++;
+            resposta[3] = 'Espanha';
+
+            resultado.style.display = 'block';
+
+            if(erros >= 4){
+                $('#erros').text('Você errou todas as respostas');
+            }
+            if(erros < 4 && erros == 3){
+                $('#erros').text('Você errou 3 respostas');
+            }
+            if(erros < 3 && erros == 2){
+                $('#erros').text('Você errou 2 respostas');
+            }
+            else{
+                $('#erros').text('Você errou uma pergunta');
+            }
+        })
+    }
+    else if(clicked_id == 'esporte4_option4'){
+
+        resposta[3] = 'Itália';
+
+        document.querySelector('.finalizarEsporte').addEventListener('click', () => {
+            esporteImg.style.display = 'none';
+            esporteQuestion4.style.display = 'none';
+            esportes.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo1]').style.display = 'none';
+
+            sectionEsporte.style.display = 'none';
+            resultado.style.display = 'block';
+
+            
+            if(resposta[0] == 'Inglaterra' && resposta[1] == '6 de Abril de 1896' && resposta[2] == 'Michael Phelps' && resposta[3] == 'Itália'){
+                $('.acertos').text('Você acertou todas as respostas! Parabéns ^^');
+            }
+            else{
+                
+                //Primeira pergunta
+                if(resposta[0] == 'Brasil'){
+                    $('#acertos').text('Resposta certa: Inglaterra');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
+                }
+                else if(resposta[0] == 'China'){
+                    $('#acertos').text('Resposta certa: Inglaterra');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
+                }
+                else if(resposta[0] == 'França'){
+                    $('#acertos').text('Resposta certa: Inglaterra');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
+                }
+                //Segunda pergunta
+                if(resposta[1] == '13 de Fevereiro de 1905'){
+                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
+                }
+                else if(resposta[1] == '22 de Junho de 1968'){
+                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
+                }
+                else if(resposta[1] == '09 de Setembro de 1898'){
+                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
+                }
+                //Terceira pergunta
+                if(resposta[2] == 'Usain Bolt'){
+                    $('#acertos').text('Resposta certa: Michael Phelps');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
+                }
+                else if(resposta[2] == 'Daiane dos Santos'){
+                    $('#acertos').text('Resposta certa: Michael Phelps');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
+                }
+                else if(resposta[2] == 'Rafael Nadal'){
+                    $('#acertos').text('Resposta certa: Michael Phelps');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
+                }
+                //Última pergunta
+                if(resposta[3] == 'México'){
+                    $('#acertos').text('Resposta certa: Itália');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
+                }
+                else if(resposta[3] == 'Estados Unidos'){
+                    $('#acertos').text('Resposta certa: Itália');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
+                }
+                else if(resposta[3] == 'Espanha'){
+                    $('#acertos').text('Resposta certa: Itália');
+                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
+                }
+                
+                //Saber quais respostas estão erradas
+                if((resposta[0] == 'Brasil' || resposta[0] == 'China' || resposta[0] == 'França') || 
+                (resposta[1] == '13 de Fevereiro de 1905' || resposta[1] == '22 de Junho de 1968' || resposta[1] == '09 de Setembro de 1898') || 
+                (resposta[2] == 'Usain Bolt' || resposta[2] == 'Daiane dos Santos' || resposta[2] == 'Rafael Nadal') ||
+                (resposta[3] == 'México' || resposta[3] == 'Estados Unidos' || resposta[3] == 'Espanha')){
+                    $('#erros').text('Respostas erradas: ' + '1.' + resposta[0] + ', ' +  '2.' + resposta[1] + ', ' + '3.' + resposta[2]);
+                    $('#acertos').text('Resposta certas: 1.Inglaterra, 2.6 de Abril de 1896, 3.Michael Phelps, 4.Itália');
+                }
+            }
+
+        });
+           
+    }
+}
+
+/*CONTADOR DO TEMPO*/
+
+//Para esporte
+function iniciarTempo1(duracao1, tela1) {
+
+    var tempo1 = duracao1, minutos, segundos;
+    setInterval(function () {
+        
+        minutos = parseInt(tempo1 / 60, 10);
+        segundos = parseInt(tempo1 % 60, 10);
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        tela1.textContent = minutos + ":" + segundos;
+
+        if (--tempo1 < 0) {
+            tempo1 = 0;
+
+            esporteQuestion1.style.display = 'none';
+            esporteQuestion2.style.display = 'none';
+            esporteQuestion3.style.display = 'none';
+            esporteQuestion4.style.display = 'none';
+
+            if($('.finalizarEsporte')){
+                    acabouEsporte.style.display = 'none';
+                    recomecarEsporte.style.display = 'none';
+            }else{
+                acabouEsporte.style.display = 'block';
+                recomecarEsporte.style.display = 'flex';
+            }
+            
+        }
+    }, 1000);
 }
 
 
