@@ -98,12 +98,12 @@ menu{
 
 .resultado{
     display: none;
-    height: 300px;
 }
 
-.img-resultado{
-    background-image: url('../img/animais.jpg');
-    width: 320px;
+.img-resultado img{
+    width: 280px;
+    position: absolute;
+    left: 39%;
 }
 
 .erros{
