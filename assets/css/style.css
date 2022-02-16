@@ -6,6 +6,16 @@
     font-family: 'Inter', sans-serif;
 }
 
+.buttonEsportes,
+.buttonFilme,
+.buttonHistoria,
+.buttonAnimais{
+    margin-right: 2%
+}
+.buttonEsportes{
+    margin-left: 2.8%;
+}
+
 .btn-purple{
     background-color: #9C51E0;
     color: #FFF;
@@ -96,11 +106,17 @@ menu{
     margin-right: 5%;
 }
 
+#image-gif{
+    display: block;
+    margin-left: 34%;
+}
+
 .resultado{
     display: none;
 }
 
 .img-resultado img{
+    display: block;
     width: 280px;
     position: absolute;
     left: 39%;
@@ -159,19 +175,66 @@ menu{
 }
 
 
-.tempo{
+.tempo1 {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-left: 46%;
+    margin-left: 47.4%;
+    margin-top: 1rem;
     text-align: center;
     font-weight: 600;
     background-color: #444;
     color: #AF0;
-    width: 8%;
+    width: 6%;
     padding: .5rem;
     border-radius: .5rem;
 }
+
+.tempo2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 46%;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #444;
+    color: #AF0;
+    width: 6%;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.tempo3 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 46%;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #444;
+    color: #AF0;
+    width: 6%;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.tempo4 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 46%;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: #444;
+    color: #AF0;
+    width: 6%;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
 
 .esporte-img{
     display: flex;
@@ -239,7 +302,7 @@ menu{
 }
 
 .historia-img img{
-    width: 450px;
+    width: 420px;
     border-radius: .5rem;
 }
 
@@ -321,4 +384,169 @@ menu{
 .socials a:hover{
     opacity: .4;
     transition-delay: .1s;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* RESPONSIVO */
+@media screen and (min-width: 360px) and (max-width: 400px){
+    body{
+        overflow-x: hidden;
+    }
+    .menu-home h1 {
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+    .img-home {
+        width: 48px;
+        margin-left: .5rem;
+    }
+    .first-check {
+        margin-left: 0; 
+        margin-top: 0; 
+        margin-bottom: 0; 
+    }
+    .buttons{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    .buttonEsportes,
+    .buttonFilme,
+    .buttonHistoria,
+    .buttonAnimais{
+        width: 16rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+    
+    #image-gif{
+        display: none !important;
+    }
+
+    .tempo1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-left: 38%;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 600;
+        background-color: #444;
+        color: #AF0;
+        width: 25%;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+    
+    .tempo2 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-left: 38%;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 600;
+        background-color: #444;
+        color: #AF0;
+        width: 25%;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+    
+    .tempo3 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-left: 38%;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 600;
+        background-color: #444;
+        color: #AF0;
+        width: 25%;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+    
+    .tempo4 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-left: 38%;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 600;
+        background-color: #444;
+        color: #AF0;
+        width: 25%;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    .esporte-img img,
+    .filme-img img,
+    .historia-img img,
+    .animais-img img {
+        width: 340px;
+        border-radius: .5rem;
+    }
+    .recomecar-esporte, 
+    .recomecar-filme, 
+    .recomecar-historia, 
+    .recomecar-animais {
+        margin-left: 40%;
+        padding: .5rem;
+        border: 1px solid transparent;
+        background-color: #444;
+        color: #fff;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+    .next {
+        position: relative;
+        margin-left: 50%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .next2,
+    .nextEsporte,
+    .nextFilme,
+    .nextFilme2,
+    .nextHistoria,
+    .nextHistoria2,
+    .nextHistoria3,
+    .finalizarAnimais{
+        margin-top: 2rem;
+    }
+    .form-check2 {
+        display: flex;
+        margin-left: 8%;
+    }
+    .pergunta {
+        margin-left: 8%;
+        font-weight: 600;
+    }
+    .img-resultado img {
+        width: 280px;
+        position: absolute;
+        left: 14%;
+    }
+    .footer {
+        background-color: #2B2B2B;
+        color: #FFF;
+        height: calc(100vh - 28rem);
+    }
+    
+    .form-check:nth-child(3) {
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 0.4em;
+        margin-bottom: .125rem;
+    }
+    
 }

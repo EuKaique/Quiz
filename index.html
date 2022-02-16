@@ -26,22 +26,27 @@
         </div>
         <div class="options-home">
             <h3 id="tema">Escolha o tema:</h3>
-            <div class="form-check first-check">
-                <button class="btn btn-success buttonEsportes" onclick="botaoEsporte()">Esportes</button>
-              </div>
-            <div class="form-check">
-                <button class="btn btn-purple buttonFilme" onclick="botaoFilmes()">Filmes</button>
+            <div class="buttons">
+            
+                    <button class="btn btn-success buttonEsportes" onclick="botaoEsporte()">Esportes</button>
+                  
+                
+                    <button class="btn btn-purple buttonFilme" onclick="botaoFilmes()">Filmes</button>
+                
+                
+                    <button class="btn btn-primary buttonHistoria" onclick="botaoHistoria()">Historia</button>
+                
+                
+                    <button class="btn btn-orange buttonAnimais" onclick="botaoAnimais()">Animais</button>
+                
             </div>
-            <div class="form-check">
-                <button class="btn btn-primary buttonHistoria" onclick="botaoHistoria()">Historia</button>
-            </div>
-            <div class="form-check">
-                <button class="btn btn-orange buttonAnimais" onclick="botaoAnimais()">Animais</button>
-            </div>
+        </div>
+        <div id="image-gif">
+            <img src="/assets/img/resultado.gif" alt="">
         </div>
         <section class="esporte" id="esporte">
         <!--ESPORTES-->
-        <p tempo1 class="tempo"></p>
+        <p tempo1 class="tempo1"></p>
         <div class="esporte-img">
             <img src="assets/img/esportes.jpg" class="img-fluid" alt="...">
         </div>
@@ -178,7 +183,7 @@
     </section>
     <!--FILMES-->
     <section class="filme">
-        <p tempo2 class="tempo"></p>
+        <p tempo2 class="tempo2"></p>
         <div class="filme-img">
             <img src="assets/img/filmes.jpg" class="img-fluid" alt="...">
         </div>
@@ -315,7 +320,7 @@
     </section>
     <!--HISTORIA-->
     <section class="historia">
-        <p tempo3 class="tempo"></p>
+        <p tempo3 class="tempo3"></p>
         <div class="historia-img">
             <img src="assets/img/historia.jpg" class="img-fluid" alt="...">
         </div>
@@ -323,7 +328,7 @@
         <button class="recomecar-historia" onclick="recarrega()">Reiniciar</button>
         <div class="ocultar-historia">
             <p class="pergunta">
-                1- Em que ano foi proclamada a idependência do Brasil?
+                1- Em que ano foi proclamada a independência do Brasil?
             </p>
             <div class="options historia1">
                 <div class="form-check2">
@@ -423,25 +428,25 @@
             </p>
             <div class="options historia4">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option1" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         8 de Junho de 1946
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option2" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         8 de Maio de 1945
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option3" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         12 de Abril de 1944
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="historia4_option4" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         15 de Janeiro de 1948
                       </label>
@@ -452,7 +457,7 @@
     </section>
     <!--ANIMAIS-->
     <section class="animais">
-        <p tempo4 class="tempo"></p>
+        <p tempo4 class="tempo4"></p>
         <div class="animais-img">
             <img src="assets/img/animais.jpg" class="img-fluid" alt="...">
         </div>
@@ -560,25 +565,25 @@
             </p>
             <div class="options animais4">
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option1" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option1 espaco" for="flexRadioDefault1">
                         Tigre-branco, Pinguín, Boto-cor-de-rosa
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option2" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option2 espaco" for="flexRadioDefault1">
                         Panda-gigante, Tubarão, Tigre
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option3" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option3 espaco" for="flexRadioDefault1">
                         Onça-pintada, Lobo-guará, Arara-azul
                       </label>
                 </div>
                 <div class="form-check2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="animais4_option4" onclick="checkarUltima(this.id)">
                     <label class="form-check-label option4 espaco" for="flexRadioDefault1">
                         Mico-leão-dourado, Gorila, Elefante
                       </label>

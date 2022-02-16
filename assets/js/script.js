@@ -41,8 +41,6 @@ var animaisQuestion3 = document.querySelector(".ocultar-animais3");
 var animaisQuestion4 = document.querySelector(".ocultar-animais4");
 var animais = document.querySelector(".buttonAnimais");
 
-var tema = document.getElementById("tema");
-
 var tempo = document.getElementById('tempo');
 
 var resultado = document.querySelector(".resultado");
@@ -60,6 +58,9 @@ function botaoEsporte(){
     document.querySelector('.buttonFilme').style.display = "none";
     document.querySelector('.buttonHistoria').style.display = "none"; 
     document.querySelector('.buttonAnimais').style.display = "none";
+
+    $('#tema').fadeToggle();
+    $('#image-gif').fadeToggle();
     
     //Seta o temporizador
     
@@ -82,18 +83,24 @@ function botaoFilmes(){
     filmeQuestion1.style.display = 'block';
     filmeQuestion1.style.height = '10rem';
     document.querySelector('.footer').style.marginTop = '12rem';
-    filmes.style.marginBottom = "3rem";
-    filmes.style.marginTop = "-5rem";
-    filmes.style.marginLeft = "0";
 
+    /*
+        filmes.style.marginBottom = "3rem";
+        filmes.style.marginTop = "-5rem";
+        filmes.style.marginLeft = "0";
+    */
+    
     document.querySelector('.buttonEsportes').style.display = "none";
     document.querySelector('.buttonHistoria').style.display = "none"; 
     document.querySelector('.buttonAnimais').style.display = "none";
     
+    $('#tema').fadeToggle();
+    $('#image-gif').fadeToggle();
+
     //Seta o temporizador
     
     // Converter para segundos
-    var duracao2 = 60 * 1;
+    var duracao2 = 60 * 3;
 
     // selecionando o tempo
     tela2 = document.querySelector('[tempo2]');
@@ -109,18 +116,23 @@ function botaoHistoria(){
     historiaQuestion1.style.display = 'block';
     historiaQuestion1.style.height = '10rem';
     document.querySelector('.footer').style.marginTop = '12rem';
+    /*
     historia.style.marginBottom = "3rem";
     historia.style.marginTop = "-5rem";
     historia.style.marginLeft = "0";
+    */
 
     document.querySelector('.buttonEsportes').style.display = "none";
     document.querySelector('.buttonFilme').style.display = "none"; 
     document.querySelector('.buttonAnimais').style.display = "none";
+
+    $('#tema').fadeToggle();
+    $('#image-gif').fadeToggle();
     
     //Seta o temporizador
     
     // Converter para segundos
-    var duracao3 = 60 * 1;
+    var duracao3 = 60 * 3;
 
     // selecionando o tempo
     tela3 = document.querySelector('[tempo3]');
@@ -136,18 +148,23 @@ function botaoAnimais(){
     $('.ocultar-animais').fadeIn("slow");
     animaisQuestion1.style.height = '10rem';
     document.querySelector('.footer').style.marginTop = '12rem';
+    /*
     animais.style.marginBottom = "3rem";
     animais.style.marginTop = "-5rem";
     animais.style.marginLeft = "0";
+    */
 
     document.querySelector('.buttonEsportes').style.display = "none";
     document.querySelector('.buttonFilme').style.display = "none"; 
     document.querySelector('.buttonHistoria').style.display = "none";
+
+    $('#tema').fadeToggle();
+    $('#image-gif').fadeToggle();
     
     //Seta o temporizador
     
     // Converter para segundos
-    var duracao4 = 60 * 1;
+    var duracao4 = 60 * 3;
 
     // selecionando o tempo
     tela4 = document.querySelector('[tempo4]');
@@ -172,6 +189,7 @@ function checkar(clicked_id){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
+
             errada[0] = 'Brasil';
         });
     }
@@ -179,7 +197,7 @@ function checkar(clicked_id){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
-            erros++;
+
             errada[0] = 'China';
         });
     }
@@ -195,7 +213,7 @@ function checkar(clicked_id){
         document.querySelector('.next').addEventListener('click', () => {
             esporteQuestion1.style.display = 'none';
             esporteQuestion2.style.display = 'block';
-            erros++;
+
             errada[0] = 'França';
         });
     }
@@ -204,6 +222,7 @@ function checkar(clicked_id){
         document.querySelector('.nextFilme').addEventListener('click', () => {
             filmeQuestion1.style.display = 'none';
             filmeQuestion2.style.display = 'block';
+
             errada[0] = 'Robert Downey Jr';
         });
     }
@@ -211,6 +230,7 @@ function checkar(clicked_id){
         document.querySelector('.nextFilme').addEventListener('click', () => {
             filmeQuestion1.style.display = 'none';
             filmeQuestion2.style.display = 'block';
+
             errada[0] = 'Chris Evans';
         });
     }
@@ -218,6 +238,7 @@ function checkar(clicked_id){
         document.querySelector('.nextFilme').addEventListener('click', () => {
             filmeQuestion1.style.display = 'none';
             filmeQuestion2.style.display = 'block';
+
             errada[0] = 'Ben Stiller';
         });
     }
@@ -225,6 +246,7 @@ function checkar(clicked_id){
         document.querySelector('.nextFilme').addEventListener('click', () => {
             filmeQuestion1.style.display = 'none';
             filmeQuestion2.style.display = 'block';
+
             resposta[0] = 'Brendan Fraser';
         });
     }
@@ -233,24 +255,32 @@ function checkar(clicked_id){
         document.querySelector('.nextHistoria').addEventListener('click', () => {
             historiaQuestion1.style.display = 'none';
             historiaQuestion2.style.display = 'block';
+
+            errada[0] == '5 de Abril de 1822';
         });
     }
     else if(clicked_id == 'historia1_option2'){
         document.querySelector('.nextHistoria').addEventListener('click', () => {
             historiaQuestion1.style.display = 'none';
             historiaQuestion2.style.display = 'block';
+
+            errada[0] = '10 de Junho de 1500';
         });
     }
     else if(clicked_id == 'historia1_option3'){
         document.querySelector('.nextHistoria').addEventListener('click', () => {
             historiaQuestion1.style.display = 'none';
             historiaQuestion2.style.display = 'block';
+
+            resposta[0] = '7 de Setembro de 1822';
         });
     }
     else if(clicked_id == 'historia1_option4'){
         document.querySelector('.nextHistoria').addEventListener('click', () => {
             historiaQuestion1.style.display = 'none';
             historiaQuestion2.style.display = 'block';
+
+            errada[0] = '26 de Maio de 1810';
         });
     }
     //animais
@@ -258,24 +288,34 @@ function checkar(clicked_id){
         $('.nextAnimais').on('click', () => {
             $('.ocultar-animais').fadeToggle();
             $('.ocultar-animais2').fadeIn();
+
+            resposta[0] = 'Elefante';
         });
+
     }
     else if(clicked_id == 'animais1_option2'){
         document.querySelector('.nextAnimais').addEventListener('click', () => {
             animaisQuestion1.style.display = 'none';
             animaisQuestion2.style.display = 'block';
+
+            errada[0] = 'Gorila';
+
         });
     }
     else if(clicked_id == 'animais1_option3'){
         document.querySelector('.nextAnimais').addEventListener('click', () => {
             animaisQuestion1.style.display = 'none';
             animaisQuestion2.style.display = 'block';
+
+            errada[0] = 'Hipopótamo';
         });
     }
     else if(clicked_id == 'animais1_option4'){
         document.querySelector('.nextAnimais').addEventListener('click', () => {
             animaisQuestion1.style.display = 'none';
             animaisQuestion2.style.display = 'block';
+
+            errada[0] = 'Baleia';
         });
     }
 
@@ -354,24 +394,32 @@ function checkar2(clicked_id){
         document.querySelector('.nextHistoria2').addEventListener('click', () => {
             historiaQuestion2.style.display = 'none';
             historiaQuestion3.style.display = 'block';
+
+            errada[1] = 'Charles Conrad';
         });
     }
     else if(clicked_id == 'historia2_option2'){
         document.querySelector('.nextHistoria2').addEventListener('click', () => {
             historiaQuestion2.style.display = 'none';
             historiaQuestion3.style.display = 'block';
+
+            errada[1] = 'Alan Bean';
         });
     }
     else if(clicked_id == 'historia2_option3'){
         document.querySelector('.nextHistoria2').addEventListener('click', () => {
             historiaQuestion2.style.display = 'none';
             historiaQuestion3.style.display = 'block';
+
+            errada[1] = 'Alan B. Shepard Jr';
         });
     }
     else if(clicked_id == 'historia2_option4'){
         document.querySelector('.nextHistoria2').addEventListener('click', () => {
             historiaQuestion2.style.display = 'none';
             historiaQuestion3.style.display = 'block';
+
+            resposta[1] = 'Neil Armstrong';
         });
     }
     //animais
@@ -379,24 +427,32 @@ function checkar2(clicked_id){
         $('.nextAnimais2').on('click', () => {
             $('.ocultar-animais2').fadeToggle();
             $('.ocultar-animais3').fadeIn();
+
+            errada[1] = 'Serpente';
         });
     }
     else if(clicked_id == 'animais2_option2'){
         document.querySelector('.nextAnimais2').addEventListener('click', () => {
             animaisQuestion2.style.display = 'none';
             animaisQuestion3.style.display = 'block';
+
+            errada[1] = 'Leão';
         });
     }
     else if(clicked_id == 'animais2_option3'){
         document.querySelector('.nextAnimais2').addEventListener('click', () => {
             animaisQuestion2.style.display = 'none';
             animaisQuestion3.style.display = 'block';
+
+            errada[1] = 'Águia';
         });
     }
     else if(clicked_id == 'animais2_option4'){
         document.querySelector('.nextAnimais2').addEventListener('click', () => {
             animaisQuestion2.style.display = 'none';
             animaisQuestion3.style.display = 'block';
+
+            resposta[1] = 'Avestruz';
         });
     }
 
@@ -475,24 +531,32 @@ function checkar3(clicked_id){
         document.querySelector('.nextHistoria3').addEventListener('click', () => {
             historiaQuestion3.style.display = 'none';
             historiaQuestion4.style.display = 'block';
+
+            resposta[2] = 'Marechal Deodoro da Fonseca';
         });
     }    
     else if(clicked_id == 'historia3_option2'){
         document.querySelector('.nextHistoria3').addEventListener('click', () => {
             historiaQuestion3.style.display = 'none';
             historiaQuestion4.style.display = 'block';
+
+            errada[2] = 'Luis Inácio Lula da Silva';
         });
     }
     else if(clicked_id == 'historia3_option3'){
         document.querySelector('.nextHistoria3').addEventListener('click', () => {
             historiaQuestion3.style.display = 'none';
             historiaQuestion4.style.display = 'block';
+
+            errada[2] = 'Fernando Henrique Cardoso';
         });
     }
     else if(clicked_id == 'historia3_option4'){
         document.querySelector('.nextHistoria3').addEventListener('click', () => {
             historiaQuestion3.style.display = 'none';
             historiaQuestion4.style.display = 'block';
+
+            errada[2] = 'Getúlio Vargas';
         });
     }
     //animais
@@ -500,24 +564,32 @@ function checkar3(clicked_id){
         $('.nextAnimais3').on('click', () => {
             $('.ocultar-animais3').fadeToggle();
             $('.ocultar-animais4').fadeIn();
+
+            errada[2] = 'Leopardo';
         });
     }
     else if(clicked_id == 'animais3_option2'){
         document.querySelector('.nextAnimais3').addEventListener('click', () => {
             animaisQuestion3.style.display = 'none';
             animaisQuestion4.style.display = 'block';
+
+            resposta[2] = 'Guepardo';
         });
     }
     else if(clicked_id == 'animais3_option3'){
         document.querySelector('.nextAnimais3').addEventListener('click', () => {
             animaisQuestion3.style.display = 'none';
             animaisQuestion4.style.display = 'block';
+
+            errada[2] = 'Tigre';
         });
     }
     else if(clicked_id == 'animais3_option4'){
         document.querySelector('.nextAnimais3').addEventListener('click', () => {
             animaisQuestion3.style.display = 'none';
             animaisQuestion4.style.display = 'block';
+
+            errada[2] = 'Rinoceronte';
         });
     }
 
@@ -547,59 +619,6 @@ function checkarUltima(clicked_id){
                 $('.acertos').text('Você acertou todas as respostas! Parabéns ^^');
             }
             else{
-                
-                //Primeira pergunta
-                if(resposta[0] == 'Brasil'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'China'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'França'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                //Segunda pergunta
-                if(resposta[1] == '13 de Fevereiro de 1905'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '22 de Junho de 1968'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '09 de Setembro de 1898'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                //Terceira pergunta
-                if(resposta[2] == 'Usain Bolt'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Daiane dos Santos'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Rafael Nadal'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                //Última pergunta
-                if(resposta[3] == 'México'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Estados Unidos'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Espanha'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
                 
                 //Saber quais respostas estão certas e erradas
                 if((errada[0] == 'Brasil' || errada[0] == 'China' || errada[0] == 'França') || 
@@ -672,59 +691,6 @@ function checkarUltima(clicked_id){
             }
             else{
                 
-                //Primeira pergunta
-                if(resposta[0] == 'Brasil'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'China'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'França'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                //Segunda pergunta
-                if(resposta[1] == '13 de Fevereiro de 1905'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '22 de Junho de 1968'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '09 de Setembro de 1898'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                //Terceira pergunta
-                if(resposta[2] == 'Usain Bolt'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Daiane dos Santos'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Rafael Nadal'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                //Última pergunta
-                if(resposta[3] == 'México'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Estados Unidos'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Espanha'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                
                 //Saber quais respostas estão certas e erradas
                 if((errada[0] == 'Brasil' || errada[0] == 'China' || errada[0] == 'França') || 
                 (errada[1] == '13 de Fevereiro de 1905' || errada[1] == '22 de Junho de 1968' || errada[1] == '09 de Setembro de 1898') || 
@@ -796,59 +762,6 @@ function checkarUltima(clicked_id){
             }
             else{
                 
-                //Primeira pergunta
-                if(resposta[0] == 'Brasil'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'China'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'França'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                //Segunda pergunta
-                if(resposta[1] == '13 de Fevereiro de 1905'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '22 de Junho de 1968'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '09 de Setembro de 1898'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                //Terceira pergunta
-                if(resposta[2] == 'Usain Bolt'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Daiane dos Santos'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Rafael Nadal'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                //Última pergunta
-                if(resposta[3] == 'México'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Estados Unidos'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Espanha'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                
                 //Saber quais respostas estão certas e erradas
                 if((errada[0] == 'Brasil' || errada[0] == 'China' || errada[0] == 'França') || 
                 (errada[1] == '13 de Fevereiro de 1905' || errada[1] == '22 de Junho de 1968' || errada[1] == '09 de Setembro de 1898') || 
@@ -918,59 +831,6 @@ function checkarUltima(clicked_id){
                 $('.acertos').text('Você acertou todas! Parabéns ^^');
             }
             else{
-                
-                //Primeira pergunta
-                if(resposta[0] == 'Brasil'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'China'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                if(resposta[0] == 'França'){
-                    $('#acertos').text('Resposta certa: Inglaterra');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[0]);
-                }
-                //Segunda pergunta
-                if(resposta[1] == '13 de Fevereiro de 1905'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '22 de Junho de 1968'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                if(resposta[1] == '09 de Setembro de 1898'){
-                    $('#acertos').text('Resposta certa: 6 de Abril de 1896');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[1]);
-                }
-                //Terceira pergunta
-                if(resposta[2] == 'Usain Bolt'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Daiane dos Santos'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                if(resposta[2] == 'Rafael Nadal'){
-                    $('#acertos').text('Resposta certa: Michael Phelps');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[2]);
-                }
-                //Última pergunta
-                if(resposta[3] == 'México'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Estados Unidos'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
-                if(resposta[3] == 'Espanha'){
-                    $('#acertos').text('Resposta certa: Itália');
-                    $('#erros').text('Você errou a pergunta: ' + resposta[3]);
-                }
                 
                 //Saber quais respostas estão certas e erradas
                 if((errada[0] == 'Brasil' || errada[0] == 'China' || errada[0] == 'França') || 
@@ -1109,6 +969,54 @@ function checkarUltima(clicked_id){
             if(resposta[0] == 'Brendan Fraser' && resposta[1] == 'Scarlett Johansson' && resposta[2] == '5' && resposta[3] == '1911'){
                 $('.acertos').text('Você acertou todas! Parabéns ^^');
             }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Robert Downey Jr' || errada[0] == 'Chris Evans' || errada[0] == 'Ben Stiller') || 
+                (errada[1] == 'Gal Gadot' || errada[1] == 'Angelina Jolie' || errada[1] == 'Jennifer Lopez') || 
+                ((errada[2] == '3' || errada[2] == '4' || errada[2] == '2')) ||
+                (errada[3] == '1905' || errada[3] == '1913' || errada[3] == '1966' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Robert Downey Jr' && resposta[0] != 'Chris Evans' && resposta[0] != 'Ben Stiller') || 
+                    (resposta[1] != 'Gal Gadot' && resposta[1] == 'Angelina Jolie' && resposta[1] != 'Jennifer Lopez') || 
+                    (resposta[2] != '3' && resposta[2] != '4' && resposta[2] != '2') ||
+                    (resposta[3] != '1905' && resposta[3] != '1913' && resposta[3] != '1966')){
+
+                        resposta[0] = 'Brendan Fraser';
+                        resposta[1] = 'Scarlett Johansson';
+                        resposta[2] = '5';
+                        resposta[3] = '1911';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
         });  
         
     }
@@ -1130,6 +1038,54 @@ function checkarUltima(clicked_id){
 
             if(resposta[0] == 'Brendan Fraser' && resposta[1] == 'Scarlett Johansson' && resposta[2] == '5' && resposta[3] == '1911'){
                 $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Robert Downey Jr' || errada[0] == 'Chris Evans' || errada[0] == 'Ben Stiller') || 
+                (errada[1] == 'Gal Gadot' || errada[1] == 'Angelina Jolie' || errada[1] == 'Jennifer Lopez') || 
+                ((errada[2] == '3' || errada[2] == '4' || errada[2] == '2')) ||
+                (errada[3] == '1905' || errada[3] == '1913' || errada[3] == '1966' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Robert Downey Jr' && resposta[0] != 'Chris Evans' && resposta[0] != 'Ben Stiller') || 
+                    (resposta[1] != 'Gal Gadot' && resposta[1] == 'Angelina Jolie' && resposta[1] != 'Jennifer Lopez') || 
+                    (resposta[2] != '3' && resposta[2] != '4' && resposta[2] != '2') ||
+                    (resposta[3] != '1905' && resposta[3] != '1913' && resposta[3] != '1966')){
+
+                        resposta[0] = 'Brendan Fraser';
+                        resposta[1] = 'Scarlett Johansson';
+                        resposta[2] = '5';
+                        resposta[3] = '1911';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
             }
         });  
         
@@ -1153,7 +1109,624 @@ function checkarUltima(clicked_id){
             if(resposta[0] == 'Brendan Fraser' && resposta[1] == 'Scarlett Johansson' && resposta[2] == '5' && resposta[3] == '1911'){
                 $('.acertos').text('Você acertou todas! Parabéns ^^');
             }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Robert Downey Jr' || errada[0] == 'Chris Evans' || errada[0] == 'Ben Stiller') || 
+                (errada[1] == 'Gal Gadot' || errada[1] == 'Angelina Jolie' || errada[1] == 'Jennifer Lopez') || 
+                ((errada[2] == '3' || errada[2] == '4' || errada[2] == '2')) ||
+                (errada[3] == '1905' || errada[3] == '1913' || errada[3] == '1966' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Robert Downey Jr' && resposta[0] != 'Chris Evans' && resposta[0] != 'Ben Stiller') || 
+                    (resposta[1] != 'Gal Gadot' && resposta[1] == 'Angelina Jolie' && resposta[1] != 'Jennifer Lopez') || 
+                    (resposta[2] != '3' && resposta[2] != '4' && resposta[2] != '2') ||
+                    (resposta[3] != '1905' && resposta[3] != '1913' && resposta[3] != '1966')){
+
+                        resposta[0] = 'Brendan Fraser';
+                        resposta[1] = 'Scarlett Johansson';
+                        resposta[2] = '5';
+                        resposta[3] = '1911';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
         });  
+        
+    }
+    //Historia
+    if(clicked_id == 'historia4_option1'){
+
+        errada[3] = '18 de Junho de 1946';
+
+        document.querySelector('.finalizarHistoria').addEventListener('click', () => {
+            historiaImg.style.display = 'none';
+            historiaQuestion4.style.display = 'none';
+            historia.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo3]').style.display = 'none';
+            acabouHistoria.style.display = 'none';
+            recomecarHistoria.style.display = 'none';
+
+            sectionHistoria.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == '7 de Setembro de 1822' && resposta[1] == 'Neil Armstrong' && resposta[2] == 'Marechal Deodoro da Fonseca' && resposta[3] == '8 de Maio de 1945'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == '5 de Abril de 1822' || errada[0] == '10 de Junho de 1500' || errada[0] == '26 de Maio de 1810') || 
+                (errada[1] == 'Charles Conrad' || errada[1] == 'Alan Bean' || errada[1] == 'Alan B. Shepard Jr') || 
+                ((errada[2] == 'Luis Inácio Lula da Silva' || errada[2] == 'Fernando Henrique Cardoso' || errada[2] == 'Getúlio Vargas')) ||
+                (errada[3] == '18 de Junho de 1946' || errada[3] == '12 de Abril de 1944' || errada[3] == '15 de Janeiro de 1948' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != '5 de Abril de 1822' && resposta[0] != '10 de Junho de 1500' && resposta[0] != '26 de Maio de 1810') || 
+                    (resposta[1] != 'Charles Conrad' && resposta[1] != 'Alan Bean' && resposta[1] != 'Alan B. Shepard Jr') || 
+                    (resposta[2] != 'Luis Inácio Lula da Silva' && resposta[2] != 'Fernando Henrique Cardoso' && resposta[2] != 'Getúlio Vargas') ||
+                    (resposta[3] != '18 de Junho de 1946' && resposta[3] != '12 de Abril de 1944' && resposta[3] != '15 de Janeiro de 1948')){
+
+                        resposta[0] = '7 de Setembro de 1822';
+                        resposta[1] = 'Neil Armstrong';
+                        resposta[2] = 'Marechal Deodoro da Fonseca';
+                        resposta[3] = '8 de Maio de 1945';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });  
+
+    }
+    else if(clicked_id == 'historia4_option2'){
+
+        resposta[3] = '8 de Maio de 1945';
+
+        document.querySelector('.finalizarHistoria').addEventListener('click', () => {
+            historiaImg.style.display = 'none';
+            historiaQuestion4.style.display = 'none';
+            historia.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo3]').style.display = 'none';
+            acabouHistoria.style.display = 'none';
+            recomecarHistoria.style.display = 'none';
+
+            sectionHistoria.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == '7 de Setembro de 1822' && resposta[1] == 'Neil Armstrong' && resposta[2] == 'Marechal Deodoro da Fonseca' && resposta[3] == '8 de Maio de 1945'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == '5 de Abril de 1822' || errada[0] == '10 de Junho de 1500' || errada[0] == '26 de Maio de 1810') || 
+                (errada[1] == 'Charles Conrad' || errada[1] == 'Alan Bean' || errada[1] == 'Alan B. Shepard Jr') || 
+                ((errada[2] == 'Luis Inácio Lula da Silva' || errada[2] == 'Fernando Henrique Cardoso' || errada[2] == 'Getúlio Vargas')) ||
+                (errada[3] == '18 de Junho de 1946' || errada[3] == '12 de Abril de 1944' || errada[3] == '15 de Janeiro de 1948' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != '5 de Abril de 1822' && resposta[0] != '10 de Junho de 1500' && resposta[0] != '26 de Maio de 1810') || 
+                    (resposta[1] != 'Charles Conrad' && resposta[1] != 'Alan Bean' && resposta[1] != 'Alan B. Shepard Jr') || 
+                    (resposta[2] != 'Luis Inácio Lula da Silva' && resposta[2] != 'Fernando Henrique Cardoso' && resposta[2] != 'Getúlio Vargas') ||
+                    (resposta[3] != '18 de Junho de 1946' && resposta[3] != '12 de Abril de 1944' && resposta[3] != '15 de Janeiro de 1948')){
+
+                        resposta[0] = '7 de Setembro de 1822';
+                        resposta[1] = 'Neil Armstrong';
+                        resposta[2] = 'Marechal Deodoro da Fonseca';
+                        resposta[3] = '8 de Maio de 1945';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
+    }
+    else if(clicked_id == 'historia4_option3'){
+
+        errada[3] = '12 de Abril de 1944';
+
+        document.querySelector('.finalizarHistoria').addEventListener('click', () => {
+            historiaImg.style.display = 'none';
+            historiaQuestion4.style.display = 'none';
+            historia.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo3]').style.display = 'none';
+            acabouHistoria.style.display = 'none';
+            recomecarHistoria.style.display = 'none';
+
+            sectionHistoria.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == '7 de Setembro de 1822' && resposta[1] == 'Neil Armstrong' && resposta[2] == 'Marechal Deodoro da Fonseca' && resposta[3] == '8 de Maio de 1945'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == '5 de Abril de 1822' || errada[0] == '10 de Junho de 1500' || errada[0] == '26 de Maio de 1810') || 
+                (errada[1] == 'Charles Conrad' || errada[1] == 'Alan Bean' || errada[1] == 'Alan B. Shepard Jr') || 
+                ((errada[2] == 'Luis Inácio Lula da Silva' || errada[2] == 'Fernando Henrique Cardoso' || errada[2] == 'Getúlio Vargas')) ||
+                (errada[3] == '18 de Junho de 1946' || errada[3] == '12 de Abril de 1944' || errada[3] == '15 de Janeiro de 1948' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != '5 de Abril de 1822' && resposta[0] != '10 de Junho de 1500' && resposta[0] != '26 de Maio de 1810') || 
+                    (resposta[1] != 'Charles Conrad' && resposta[1] != 'Alan Bean' && resposta[1] != 'Alan B. Shepard Jr') || 
+                    (resposta[2] != 'Luis Inácio Lula da Silva' && resposta[2] != 'Fernando Henrique Cardoso' && resposta[2] != 'Getúlio Vargas') ||
+                    (resposta[3] != '18 de Junho de 1946' && resposta[3] != '12 de Abril de 1944' && resposta[3] != '15 de Janeiro de 1948')){
+
+                        resposta[0] = '7 de Setembro de 1822';
+                        resposta[1] = 'Neil Armstrong';
+                        resposta[2] = 'Marechal Deodoro da Fonseca';
+                        resposta[3] = '8 de Maio de 1945';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
+        
+    }
+    else if(clicked_id == 'historia4_option4'){
+
+        errada[3] = '15 de Janeiro de 1948';
+
+        document.querySelector('.finalizarHistoria').addEventListener('click', () => {
+            historiaImg.style.display = 'none';
+            historiaQuestion4.style.display = 'none';
+            historia.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo3]').style.display = 'none';
+            acabouHistoria.style.display = 'none';
+            recomecarHistoria.style.display = 'none';
+
+            sectionHistoria.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == '7 de Setembro de 1822' && resposta[1] == 'Neil Armstrong' && resposta[2] == 'Marechal Deodoro da Fonseca' && resposta[3] == '8 de Maio de 1945'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == '5 de Abril de 1822' || errada[0] == '10 de Junho de 1500' || errada[0] == '26 de Maio de 1810') || 
+                (errada[1] == 'Charles Conrad' || errada[1] == 'Alan Bean' || errada[1] == 'Alan B. Shepard Jr') || 
+                ((errada[2] == 'Luis Inácio Lula da Silva' || errada[2] == 'Fernando Henrique Cardoso' || errada[2] == 'Getúlio Vargas')) ||
+                (errada[3] == '18 de Junho de 1946' || errada[3] == '12 de Abril de 1944' || errada[3] == '15 de Janeiro de 1948' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != '5 de Abril de 1822' && resposta[0] != '10 de Junho de 1500' && resposta[0] != '26 de Maio de 1810') || 
+                    (resposta[1] != 'Charles Conrad' && resposta[1] != 'Alan Bean' && resposta[1] != 'Alan B. Shepard Jr') || 
+                    (resposta[2] != 'Luis Inácio Lula da Silva' && resposta[2] != 'Fernando Henrique Cardoso' && resposta[2] != 'Getúlio Vargas') ||
+                    (resposta[3] != '18 de Junho de 1946' && resposta[3] != '12 de Abril de 1944' && resposta[3] != '15 de Janeiro de 1948')){
+
+                        resposta[0] = '7 de Setembro de 1822';
+                        resposta[1] = 'Neil Armstrong';
+                        resposta[2] = 'Marechal Deodoro da Fonseca';
+                        resposta[3] = '8 de Maio de 1945';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
+        
+    }
+    //Animais
+    if(clicked_id == 'animais4_option1'){
+
+        errada[3] = 'Tigre-branco, Pinguín, Boto-cor-de-rosa';
+
+        document.querySelector('.finalizarAnimais').addEventListener('click', () => {
+            animaisImg.style.display = 'none';
+            animaisQuestion4.style.display = 'none';
+            animais.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo4]').style.display = 'none';
+            acabouAnimais.style.display = 'none';
+            recomecarAnimais.style.display = 'none';
+
+            sectionAnimais.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == 'Elefante' && resposta[1] == 'Avestruz' && resposta[2] == 'Guepardo' && resposta[3] == 'Onça-pintada, Lobo-guará, Arara-azul'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Gorila' || errada[0] == 'Hipopótamo' || errada[0] == 'Baleia') || 
+                (errada[1] == 'Serpente' || errada[1] == 'Leão' || errada[1] == 'Águia') || 
+                ((errada[2] == 'Leopardo' || errada[2] == 'Tigre' || errada[2] == 'Rinoceronte')) ||
+                (errada[3] == 'Tigre-branco, Pinguín, Boto-cor-de-rosa' || errada[3] == 'Panda-gigante, Tubarão, Tigre' || errada[3] == 'Mico-leão-dourado, Gorila, Elefante' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Gorila' && resposta[0] != 'Hipopótamo' && resposta[0] != 'Baleia') || 
+                    (resposta[1] != 'Serpente' && resposta[1] != 'Leão' && resposta[1] != 'Águia') || 
+                    (resposta[2] != 'Leopardo' && resposta[2] != 'Tigre' && resposta[2] != 'Rinoceronte') ||
+                    (resposta[3] != 'Tigre-branco, Pinguín, Boto-cor-de-rosa' && resposta[3] != 'Panda-gigante, Tubarão, Tigre' && resposta[3] != 'Mico-leão-dourado, Gorila, Elefante')){
+
+                        resposta[0] = 'Elefante';
+                        resposta[1] = 'Avestruz';
+                        resposta[2] = 'Guepardo';
+                        resposta[3] = 'Onça-pintada, Lobo-guará, Arara-azul';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
+
+    }
+    else if(clicked_id == 'animais4_option2'){
+
+        errada[3] = 'Panda-gigante, Tubarão, Tigre';
+
+        document.querySelector('.finalizarAnimais').addEventListener('click', () => {
+            animaisImg.style.display = 'none';
+            animaisQuestion4.style.display = 'none';
+            animais.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo4]').style.display = 'none';
+            acabouAnimais.style.display = 'none';
+            recomecarAnimais.style.display = 'none';
+
+            sectionAnimais.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == 'Elefante' && resposta[1] == 'Avestruz' && resposta[2] == 'Guepardo' && resposta[3] == 'Onça-pintada, Lobo-guará, Arara-azul'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Gorila' || errada[0] == 'Hipopótamo' || errada[0] == 'Baleia') || 
+                (errada[1] == 'Serpente' || errada[1] == 'Leão' || errada[1] == 'Águia') || 
+                ((errada[2] == 'Leopardo' || errada[2] == 'Tigre' || errada[2] == 'Rinoceronte')) ||
+                (errada[3] == 'Tigre-branco, Pinguín, Boto-cor-de-rosa' || errada[3] == 'Panda-gigante, Tubarão, Tigre' || errada[3] == 'Mico-leão-dourado, Gorila, Elefante' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Gorila' && resposta[0] != 'Hipopótamo' && resposta[0] != 'Baleia') || 
+                    (resposta[1] != 'Serpente' && resposta[1] != 'Leão' && resposta[1] != 'Águia') || 
+                    (resposta[2] != 'Leopardo' && resposta[2] != 'Tigre' && resposta[2] != 'Rinoceronte') ||
+                    (resposta[3] != 'Tigre-branco, Pinguín, Boto-cor-de-rosa' && resposta[3] != 'Panda-gigante, Tubarão, Tigre' && resposta[3] != 'Mico-leão-dourado, Gorila, Elefante')){
+
+                        resposta[0] = 'Elefante';
+                        resposta[1] = 'Avestruz';
+                        resposta[2] = 'Guepardo';
+                        resposta[3] = 'Onça-pintada, Lobo-guará, Arara-azul';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
+
+    }
+    else if(clicked_id == 'animais4_option3'){
+
+        resposta[3] = 'Onça-pintada, Lobo-guará, Arara-azul';
+
+        document.querySelector('.finalizarAnimais').addEventListener('click', () => {
+            animaisImg.style.display = 'none';
+            animaisQuestion4.style.display = 'none';
+            animais.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo4]').style.display = 'none';
+            acabouAnimais.style.display = 'none';
+            recomecarAnimais.style.display = 'none';
+
+            sectionAnimais.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == 'Elefante' && resposta[1] == 'Avestruz' && resposta[2] == 'Guepardo' && resposta[3] == 'Onça-pintada, Lobo-guará, Arara-azul'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Gorila' || errada[0] == 'Hipopótamo' || errada[0] == 'Baleia') || 
+                (errada[1] == 'Serpente' || errada[1] == 'Leão' || errada[1] == 'Águia') || 
+                ((errada[2] == 'Leopardo' || errada[2] == 'Tigre' || errada[2] == 'Rinoceronte')) ||
+                (errada[3] == 'Tigre-branco, Pinguín, Boto-cor-de-rosa' || errada[3] == 'Panda-gigante, Tubarão, Tigre' || errada[3] == 'Mico-leão-dourado, Gorila, Elefante' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Gorila' && resposta[0] != 'Hipopótamo' && resposta[0] != 'Baleia') || 
+                    (resposta[1] != 'Serpente' && resposta[1] != 'Leão' && resposta[1] != 'Águia') || 
+                    (resposta[2] != 'Leopardo' && resposta[2] != 'Tigre' && resposta[2] != 'Rinoceronte') ||
+                    (resposta[3] != 'Tigre-branco, Pinguín, Boto-cor-de-rosa' && resposta[3] != 'Panda-gigante, Tubarão, Tigre' && resposta[3] != 'Mico-leão-dourado, Gorila, Elefante')){
+
+                        resposta[0] = 'Elefante';
+                        resposta[1] = 'Avestruz';
+                        resposta[2] = 'Guepardo';
+                        resposta[3] = 'Onça-pintada, Lobo-guará, Arara-azul';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
+        
+    }
+    else if(clicked_id == 'animais4_option4'){
+
+        errada[3] = 'Mico-leão-dourado, Gorila, Elefante';
+
+        document.querySelector('.finalizarAnimais').addEventListener('click', () => {
+            animaisImg.style.display = 'none';
+            animaisQuestion4.style.display = 'none';
+            animais.style.display = 'none';
+            tema.style.display = 'none';
+
+            document.querySelector('[tempo4]').style.display = 'none';
+            acabouAnimais.style.display = 'none';
+            recomecarAnimais.style.display = 'none';
+
+            sectionAnimais.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if(resposta[0] == 'Elefante' && resposta[1] == 'Avestruz' && resposta[2] == 'Guepardo' && resposta[3] == 'Onça-pintada, Lobo-guará, Arara-azul'){
+                $('.acertos').text('Você acertou todas! Parabéns ^^');
+            }
+            else{
+                
+                //Saber quais respostas estão certas e erradas
+                if((errada[0] == 'Gorila' || errada[0] == 'Hipopótamo' || errada[0] == 'Baleia') || 
+                (errada[1] == 'Serpente' || errada[1] == 'Leão' || errada[1] == 'Águia') || 
+                ((errada[2] == 'Leopardo' || errada[2] == 'Tigre' || errada[2] == 'Rinoceronte')) ||
+                (errada[3] == 'Tigre-branco, Pinguín, Boto-cor-de-rosa' || errada[3] == 'Panda-gigante, Tubarão, Tigre' || errada[3] == 'Mico-leão-dourado, Gorila, Elefante' )){
+
+                    if(errada[0] == undefined){
+                        errada[0] = '';
+                    }
+                    if(errada[1] == undefined){
+                        errada[1] = '';
+                    }
+                    if(errada[2] == undefined){
+                        errada[2] = '';
+                    }
+                    if(errada[3] == undefined){
+                        errada[3] = '';
+                    }
+
+                    erro.innerHTML = "<b>Você errou: </b>" + "<br>" + 
+                        errada[0] + "<br>" +
+                        errada[1] + "<br>" +
+                        errada[2] + "<br>" +
+                        errada[3] + "<br>";
+                        //resposta[3] + "<br>";
+
+
+                    if((resposta[0] != 'Gorila' && resposta[0] != 'Hipopótamo' && resposta[0] != 'Baleia') || 
+                    (resposta[1] != 'Serpente' && resposta[1] != 'Leão' && resposta[1] != 'Águia') || 
+                    (resposta[2] != 'Leopardo' && resposta[2] != 'Tigre' && resposta[2] != 'Rinoceronte') ||
+                    (resposta[3] != 'Tigre-branco, Pinguín, Boto-cor-de-rosa' && resposta[3] != 'Panda-gigante, Tubarão, Tigre' && resposta[3] != 'Mico-leão-dourado, Gorila, Elefante')){
+
+                        resposta[0] = 'Elefante';
+                        resposta[1] = 'Avestruz';
+                        resposta[2] = 'Guepardo';
+                        resposta[3] = 'Onça-pintada, Lobo-guará, Arara-azul';
+
+                        acerto.innerHTML = "<b>Respostas certas: </b>" + "<br>" +
+                                               resposta[0] + "<br>" +
+                                               resposta[1] + "<br>" +
+                                               resposta[2] + "<br>" +
+                                               resposta[3];
+                    } 
+                }                    
+
+            }
+        });
         
     }
 }
